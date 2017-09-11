@@ -1,0 +1,23 @@
+﻿namespace Avatar.Models.Monuments
+{
+    public class FireMonument : Monument
+    {
+        public FireMonument(string name, int fireAffinity) 
+            : base(name)
+        {
+            this.FireAffinity = fireAffinity;
+        }
+
+        public int FireAffinity { get; protected set; }
+
+        public override int GetAffinity()
+        {
+            return this.FireAffinity;
+        }
+
+        public override string ToString()
+        {
+            return $"Fire Monument: {this.Name}, Fire Affinity: {this.FireAffinity}";
+        }
+    }
+}
